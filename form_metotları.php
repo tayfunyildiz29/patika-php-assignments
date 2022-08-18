@@ -10,12 +10,14 @@
 
 <h2>Patika.dev PHP Form Metotları Ödevi</h2>
 <p>
-Kullanıcıdan sayı değeri alabileceğiniz bir form hazırlayın.
-Gelen sayı değerlerinin 3 ile bölümünden kalanın 0 olup olmadığını kontrol eden bir fonksiyon yazın.
-Kullanıcıya girilen değerin 3 bölünebilirliğini, bölünemiyorsa bölünebilen ilk değeri kullanıcıya bildirin.
-Boş değer gönderilirse değerin boş olmayacağını bildirin.
+<ol>
+<li>Kullanıcıdan sayı değeri alabileceğiniz bir form hazırlayın.</li>
+<li>Gelen sayı değerlerinin 3 ile bölümünden kalanın 0 olup olmadığını kontrol eden bir fonksiyon yazın.</li>
+<li>Kullanıcıya girilen değerin 3 bölünebilirliğini, bölünemiyorsa bölünebilen ilk değeri kullanıcıya bildirin.</li>
+<li>Boş değer gönderilirse değerin boş olmayacağını bildirin.</li>
+</ol>
 </p>
-<small>3'e bölünebilirliğini kontrol etmek istediğiniz sayıyı giriniz</small>
+<h3>3'e bölünebilirliğini kontrol etmek istediğiniz sayıyı giriniz</h3>
 
 <form action="<?=$_SERVER['PHP_SELF'];?>" method="POST">
    <input type="number" name = "number">
@@ -29,7 +31,7 @@ function checkBy3($num){
     return  $num%3 == 0 ? "Girdiğiniz sayı: $num.<br>3'e bölünebilir" : "Girdiğiniz sayı: $num.<br>3'e bölünemez. $num sayısından sonraki 3'e bölünebilen ilk değer: $closest";
 }
 
-echo "<pre>";
+
 
 if (count($_POST)!= 0){
     if (strlen($_POST["number"]) !=0){
